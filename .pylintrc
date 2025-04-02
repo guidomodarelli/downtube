@@ -1,0 +1,22 @@
+; Configuration file for pylint.
+; You can create your own configuration file by running:
+; pylint --generate-rcfile > .pylintrc
+; and then modifying it to suit your needs.
+; For more information, see:
+; https://pylint.pycqa.org/en/latest/user_guide/run.html#command-line-options
+
+[MASTER]
+# Specify a configuration file.
+rcfile=
+
+# Python code to analyze
+init-hook='import sys; sys.path.append("lib")'
+
+[FORMAT]
+# Maximum number of characters on a single line.
+max-line-length=100
+
+[DESIGN]
+# Maximum number of arguments for function / method.
+max-args=2
+

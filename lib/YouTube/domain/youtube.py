@@ -5,6 +5,14 @@ such as downloading videos, playlists, audio, subtitles, thumbnails, and metadat
 
 from abc import ABC, abstractmethod
 from pathlib import Path
+from enum import Enum
+
+class QUALITY(Enum):
+    """
+    Enum for video/audio quality options.
+    """
+    BEST = "best"
+    LOWEST = "lowest"
 
 class YouTube(ABC):
     """
@@ -23,7 +31,7 @@ class YouTube(ABC):
         self.download_path.mkdir(parents=True, exist_ok=True)
 
     @abstractmethod
-    def download_video(self, url: str) -> None:
+    def download_video(self, url: str, quality: QUALITY) -> None:
         """
         Downloads a video from YouTube.
 
@@ -33,7 +41,7 @@ class YouTube(ABC):
         raise NotImplementedError("This method is not yet implemented.")
 
     @abstractmethod
-    def download_playlist(self, url: str) -> None:
+    def download_playlist(self, url: str, quality: QUALITY) -> None:
         """
         Downloads a playlist from YouTube.
 
@@ -42,48 +50,13 @@ class YouTube(ABC):
         """
         raise NotImplementedError("This method is not yet implemented.")
 
-    def download_audio(self, url: str) -> None:
+    def download_audio(self, url: str, quality: QUALITY) -> None:
         """
         Downloads audio only from a YouTube video.
 
         Args:
             url (str): The URL of the video to extract audio from.
-        """
-        raise NotImplementedError("This method is not yet implemented.")
-
-    def download_with_options(self, url: str, resolution: str = '', formatt: str = '') -> None:
-        """
-        Downloads a video with various options.
-
-        Args:
-            url (str): The URL of the video to download.
-            resolution (str, optional): The resolution of the video (e.g., "1080p").
-            format (str, optional): The format of the video (e.g., "mp4", "webm").
-        """
-        raise NotImplementedError("This method is not yet implemented.")
-
-    def download_subtitles(self, url: str) -> None:
-        """
-        Downloads subtitles for a YouTube video.
-
-        Args:
-            url (str): The URL of the video to download subtitles
-        """
-        raise NotImplementedError("This method is not yet implemented.")
-
-    def download_thumbnail(self, url: str) -> None:
-        """
-        Downloads the thumbnail of a YouTube video.
-        Args:
-            url (str): The URL of the video to download the thumbnail from.
-        """
-        raise NotImplementedError("This method is not yet implemented.")
-
-    def download_metadata(self, url: str) -> None:
-        """
-        Downloads metadata for a YouTube video.
-        Args:
-            url (str): The URL of the video to download metadata from.
+            best (bool): Flag to indicate whether to download the best quality audio.
         """
         raise NotImplementedError("This method is not yet implemented.")
 

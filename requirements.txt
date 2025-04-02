@@ -9,4 +9,6 @@ pathlib==1.0.1
 platformdirs==4.3.7
 pylint==3.3.6
 tomlkit==0.13.2
+types-colorama==0.4.15.20240311
 typing_extensions==4.13.0
+yt-dlp==2025.3.31

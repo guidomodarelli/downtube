@@ -46,7 +46,7 @@ class YouTube(ABC):
         """
         raise NotImplementedError("This method is not yet implemented.")
 
-    def download_with_options(self, url: str, resolution: str = None, format: str = None,
+    def download_with_options(self, url: str, resolution: str = None, formatt: str = None,
                             subtitles: bool = False, audio: bool = True,
                             thumbnails: bool = False, metadata: bool = False,
                             description: bool = False, tags: bool = False) -> None:

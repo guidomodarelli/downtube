@@ -1,0 +1,7 @@
+# Python Environment
+__pycache__/
+[Aa]ctivate*
+pip*
+python*
+pyvenv*
+lib64

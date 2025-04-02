@@ -12,6 +12,10 @@ rcfile=
 # Python code to analyze
 init-hook='import sys; sys.path.append("lib")'
 
+[FORMAT]
+# Maximum number of characters on a single line.
+disable=line-too-long
+
 [DESIGN]
 # Maximum number of arguments for function / method.
 max-args=5

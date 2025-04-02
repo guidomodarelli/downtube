@@ -21,8 +21,6 @@ DownTube is a simple command-line tool for downloading videos from YouTube. It i
 - Support for downloading videos with or without audio
 - Support for downloading videos with or without thumbnails
 - Support for downloading videos with or without metadata
-- Support for downloading videos with or without date
-- Support for downloading videos with or without duration
 - Support for downloading videos with or without description
 - Support for downloading videos with or without tags
 

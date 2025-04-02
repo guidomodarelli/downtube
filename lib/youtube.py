@@ -70,6 +70,7 @@ class YouTube(ABC):
             url (str): The URL of the video to download subtitles
         """
         raise NotImplementedError("This method is not yet implemented.")
+
     def download_thumbnail(self, url: str) -> None:
         """
         Downloads the thumbnail of a YouTube video.
@@ -77,6 +78,7 @@ class YouTube(ABC):
             url (str): The URL of the video to download the thumbnail from.
         """
         raise NotImplementedError("This method is not yet implemented.")
+
     def download_metadata(self, url: str) -> None:
         """
         Downloads metadata for a YouTube video.
@@ -84,6 +86,7 @@ class YouTube(ABC):
             url (str): The URL of the video to download metadata from.
         """
         raise NotImplementedError("This method is not yet implemented.")
+
     def download_description(self, url: str) -> None:
         """
         Downloads the description of a YouTube video.

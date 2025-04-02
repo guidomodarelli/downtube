@@ -1,3 +1,8 @@
+"""
+This module provides utility functions for logging messages to the console
+with various styles and colors using the `colorama` library.
+"""
+
 from colorama import Fore, Style
 from colorama.ansi import AnsiFore, AnsiStyle
 

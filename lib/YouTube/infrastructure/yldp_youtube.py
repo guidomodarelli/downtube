@@ -74,6 +74,7 @@ class YtdlpYouTube(YouTube):
         """
         options = self.ydl_opts.copy()
         options['format'] = 'bestaudio/best' if quality == QUALITY.BEST else 'worstaudio/worst'
+        options['outtmpl'] = str(self.download_path) + '/%(title)s.%(ext)s'
         options['postprocessors'] = [{
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'mp3',

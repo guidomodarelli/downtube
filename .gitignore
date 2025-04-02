@@ -1,6 +1,7 @@
 # Python Environment
 __pycache__/
 bin/
+share/
 [Aa]ctivate*
 pip*
 python*

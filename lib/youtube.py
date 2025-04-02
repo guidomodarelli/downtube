@@ -1,3 +1,8 @@
+"""
+This module defines the YouTube interface for various YouTube operations,
+such as downloading videos, playlists, audio, subtitles, thumbnails, and metadata.
+"""
+
 from abc import ABC, abstractmethod
 from pathlib import Path
 
@@ -46,10 +51,7 @@ class YouTube(ABC):
         """
         raise NotImplementedError("This method is not yet implemented.")
 
-    def download_with_options(self, url: str, resolution: str = None, formatt: str = None,
-                            subtitles: bool = False, audio: bool = True,
-                            thumbnails: bool = False, metadata: bool = False,
-                            description: bool = False, tags: bool = False) -> None:
+    def download_with_options(self, url: str, resolution: str = None, formatt: str = None) -> None:
         """
         Downloads a video with various options.
 
@@ -57,10 +59,35 @@ class YouTube(ABC):
             url (str): The URL of the video to download.
             resolution (str, optional): The resolution of the video (e.g., "1080p").
             format (str, optional): The format of the video (e.g., "mp4", "webm").
-            subtitles (bool, optional): Whether to download subtitles. Defaults to False.
-            audio (bool, optional): Whether to include audio. Defaults to True.
-            thumbnails (bool, optional): Whether to include thumbnails. Defaults to False.
-            metadata (bool, optional): Whether to include metadata. Defaults to False.
-            description (bool, optional): Whether to include the description. Defaults to False.
+        """
+        raise NotImplementedError("This method is not yet implemented.")
+
+    def download_subtitles(self, url: str) -> None:
+        """
+        Downloads subtitles for a YouTube video.
+
+        Args:
+            url (str): The URL of the video to download subtitles
+        """
+        raise NotImplementedError("This method is not yet implemented.")
+    def download_thumbnail(self, url: str) -> None:
+        """
+        Downloads the thumbnail of a YouTube video.
+        Args:
+            url (str): The URL of the video to download the thumbnail from.
+        """
+        raise NotImplementedError("This method is not yet implemented.")
+    def download_metadata(self, url: str) -> None:
+        """
+        Downloads metadata for a YouTube video.
+        Args:
+            url (str): The URL of the video to download metadata from.
+        """
+        raise NotImplementedError("This method is not yet implemented.")
+    def download_description(self, url: str) -> None:
+        """
+        Downloads the description of a YouTube video.
+        Args:
+            url (str): The URL of the video to download the description from.
         """
         raise NotImplementedError("This method is not yet implemented.")

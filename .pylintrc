@@ -20,3 +20,6 @@ max-line-length=100
 # Maximum number of arguments for function / method.
 max-args=5
 
+[MESSAGES CONTROL]
+
+disable=missing-class-docstring,missing-module-docstring,missing-function-docstring

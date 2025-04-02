@@ -4,8 +4,7 @@ Implementation of the YouTube interface using yt-dlp.
 
 from pathlib import Path
 import yt_dlp # type: ignore
-
-from lib.YouTube.domain.youtube import YouTube, QUALITY
+from YouTube.domain.youtube import YouTube, QUALITY
 
 class YtdlpYouTube(YouTube):
     """
